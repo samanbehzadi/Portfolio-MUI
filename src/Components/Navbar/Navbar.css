@@ -1,8 +1,0 @@
-.navbar{
-    background-color: var(--Background);
-}
-@media (min-width: 576px) {
-    .contact_container{
-        width: 75%;
-    }
-}
