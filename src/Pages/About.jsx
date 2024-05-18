@@ -5,7 +5,7 @@ import Skills from './Components/Skills'
 import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 
-const About = () => {
+const About = ({helmetTitle}) => {
     const [html, setHTML] = useState(0)
     const [css, setCSS] = useState(0)
     const [js, setJs] = useState(0)
@@ -53,7 +53,7 @@ const About = () => {
         <>
             <Card sx={{ height: '100vh', backgroundColor: 'whitesmoke', overflowY: 'auto' }}>
                 <Helmet>
-                    <title>وب‌سایت سامان بهزادی | درباره من</title>
+                    <title>{helmetTitle}</title>
                 </Helmet>
                 <CardContent>
                     <Grid container>

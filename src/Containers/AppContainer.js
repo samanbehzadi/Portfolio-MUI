@@ -1,23 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DrawerActoinButton } from "../Components/Drawer";
 import { Sidebar } from "../Components/Sidebar";
 import MainContext from '../Context/index';
 import MainLayout from "../Layouts/MainLayout";
-import { Home, About } from "../Pages";
+import { Home, About, Resume, WorkSamples, Testimonials, Contact } from "../Pages";
 import Page from "../Pages/Components/Page";
 import PagesContainer from "./PagesContainer";
 import SidebarContainer from "./SidebarContainer";
+import { useMediaQuery } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 
 export default function AppContainer() {
     const [pageNumber, setPageNumber] = useState(0)
     const [drawerOpen, setDrawerOpen] = useState(false)
+    const theme = useTheme()
+    const [mode, setMode] = useState()
+    // to check if screenSize is larger than 'sm'
+    const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
+    const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+
+    // to close the Drawer, when screenSize get bigger (not usefull 😟)
+    useEffect(() => {
+        if (isSmUp) {
+            setDrawerOpen(false)
+        }
+    }, [isSmUp])
+
+    // to determine the Theme of App from OS Theme
+    useEffect(() => {
+        setMode(prefersDarkMode ? 'dark' : 'light')
+    }, [prefersDarkMode])
 
     const handlePageNumber = (event, newPage) => {
         setPageNumber(newPage)
     }
+
+    const handleThemeChange = () => {
+        setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'))
+        console.log('theme changed');
+    }
+
     return (
-        <MainContext.Provider value={{ pageNumber, handlePageNumber, drawerOpen, setDrawerOpen }}>
-            <MainLayout>
+        <MainContext.Provider value={{ pageNumber, handlePageNumber, drawerOpen, setDrawerOpen, handleThemeChange }}>
+            <MainLayout mode={mode}>
 
                 <SidebarContainer>
                     <Sidebar />
@@ -28,22 +53,22 @@ export default function AppContainer() {
 
                 <PagesContainer>
                     <Page pageNumber={pageNumber} index={0}>
-                        <Home />
+                        <Home helmetTitle={'وب‌سایت سامان بهزادی | صفحه اصلی'} />
                     </Page>
                     <Page pageNumber={pageNumber} index={1}>
-                        <About />
+                        <About helmetTitle={'وب‌سایت سامان بهزادی | درباره من'} />
                     </Page>
                     <Page pageNumber={pageNumber} index={2}>
-                        <h5 className='text-center'>رزومه من</h5>
+                        <Resume helmetTitle={'وب‌سایت سامان بهزادی | رزومه'} />
                     </Page>
                     <Page pageNumber={pageNumber} index={3}>
-                        <h5 className='text-center'>نمونه کارها</h5>
+                        <WorkSamples helmetTitle="وب‌سایت سامان بهزادی | نمونه کارها" />
                     </Page>
                     <Page pageNumber={pageNumber} index={4}>
-                        <h5 className='text-center'>نظرات </h5>
+                        <Testimonials helmetTitle='وب‌سایت سامان بهزادی | نظرات' />
                     </Page>
                     <Page pageNumber={pageNumber} index={5}>
-                        <h5 className='text-center'>ارتباط با من </h5>
+                        <Contact helmetTitle='وب‌سایت سامان بهزادی | ارتباط با من'/>
                     </Page>
                 </PagesContainer>
 

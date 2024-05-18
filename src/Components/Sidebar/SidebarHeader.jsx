@@ -1,19 +1,25 @@
 import { Avatar, Hidden, Typography } from "@mui/material";
 import {GitHub, LinkedIn, Telegram, Instagram} from '@mui/icons-material';
 import { RandomReveal } from 'react-random-reveal'
+import ThemeActionButton from "../ThemeActionButton";
+import {useTheme} from '@mui/material/styles';
 
 export default function SidebarHeader() {
+    let appTheme = useTheme()
     return (
         <>
             <Hidden mdDown>
-                <Avatar src='../../public/images/FastFood/client1.jpg' sx={{ height: 100, width: 100, margin: "8px auto" }}>
-                    سامان بهزادی
-                </Avatar>
+                <div className="position-relative d-flex">
+                    <Avatar src='../../public/images/FastFood/client1.jpg' sx={{ height: 100, width: 100, margin: "8px auto" }}>
+                        سامان بهزادی
+                    </Avatar>
+                    <ThemeActionButton />
+                </div>
             </Hidden>
-            <Typography variant='h5' sx={{ marginTop: '2rem' }}>
+            <Typography color={appTheme.palette.mode === 'dark' ? 'whitesmoke' : 'black'} variant='h5' sx={{ marginTop: '2rem' }}>
                 <RandomReveal isPlaying duration={2}  characters='سامان بهزادی' characterSet={['الف', 'ب', 'ج', 'ر','د','س','ف','ک','ل',]}/>
             </Typography>
-            <Typography sx={{ fontSize: '16px' }} variant='caption'> برنامه نویس و توسعه دهنده وب
+            <Typography color={appTheme.palette.mode === 'dark' ? 'whitesmoke' : 'black'} sx={{ fontSize: '16px' }} variant='caption'> برنامه نویس و توسعه دهنده وب
             </Typography>
             <div className='mx-auto text-center'>
                     <a id='github' className='p-2' role='button' href="https://github.com/samanbehzadi" target='_blank' rel='noopener noreferrer'>

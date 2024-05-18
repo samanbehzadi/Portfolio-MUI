@@ -6,7 +6,7 @@ import {Helmet} from 'react-helmet-async'
 // import { loadSlim } from '@tsparticles/slim'
 // import { links } from '../Constants/Particles'
 
-const Home = () => {
+const Home = ({helmetTitle}) => {
     // const [init, setInit] = useState(false)
     const nameEl = useRef(null)
     const infoEl = useRef(null)
@@ -44,7 +44,7 @@ const Home = () => {
     return (
         <>
                     <Helmet>
-                        <title>وب‌سایت سامان بهزادی | صفحه اصلی</title>
+                        <title>{helmetTitle}</title>
                     </Helmet>
                 <Box sx={{ backgroundColor: 'yellowgreen', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     {/* <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={links}  style={{width: '200px', height: '200px'}}/> */}
