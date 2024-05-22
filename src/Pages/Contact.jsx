@@ -5,7 +5,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useFormik } from 'formik';
-import { contactValidationsSchema } from './Validations/contactValidations';
+import { contactValidationsSchema } from '../Validations/contactValidations';
 import ReCAPTCHA from 'react-google-recaptcha'
 
 const Contact = ({ helmetTitle }) => {

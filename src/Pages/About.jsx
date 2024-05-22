@@ -1,11 +1,11 @@
-import { Box, Typography, Card, Chip, CardContent, Divider, Avatar } from '@mui/material'
+import { Card, Chip, CardContent, Divider, Avatar } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import { CodeRounded, KeyboardArrowLeftRounded, Person2Rounded, DockTwoTone } from '@mui/icons-material'
-import Skills from './Components/Skills'
+import { Skills } from '../Components/Pages'
 import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 
-const About = ({helmetTitle}) => {
+const About = ({ helmetTitle }) => {
     const [html, setHTML] = useState(0)
     const [css, setCSS] = useState(0)
     const [js, setJs] = useState(0)
@@ -83,7 +83,7 @@ const About = ({helmetTitle}) => {
                                 <Grid xs={12} sm={6}>
                                     <div className='text-end text-dark mt-3'>
                                         <p><DockTwoTone className='text-info' />
-                                        من سامان بهزادی هستم از سال 94 شروع به برنامه نویسی کردم اول با زبان پایتون شروع کردم و بعد از آن با فریم‌ورک جنگو آشنا شدم و پس از آن به فرانت روی آوردم و با جاوااسکریپت و ری‌اکت آشنا شدم
+                                            من سامان بهزادی هستم از سال 94 شروع به برنامه نویسی کردم اول با زبان پایتون شروع کردم و بعد از آن با فریم‌ورک جنگو آشنا شدم و پس از آن به فرانت روی آوردم و با جاوااسکریپت و ری‌اکت آشنا شدم
                                         </p>
                                     </div>
                                 </Grid>
@@ -107,7 +107,7 @@ const About = ({helmetTitle}) => {
                             <Skills percent={django} label='Django' bgColor={'green'} />
                             <Skills percent={git} label='Git' color='black' bgColor={'orange'} />
                         </Grid>
-                    </Grid>  
+                    </Grid>
                 </CardContent>
             </Card>
         </>

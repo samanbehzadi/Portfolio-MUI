@@ -4,7 +4,7 @@ import { Sidebar } from "../Components/Sidebar";
 import MainContext from '../Context/index';
 import MainLayout from "../Layouts/MainLayout";
 import { Home, About, Resume, WorkSamples, Testimonials, Contact } from "../Pages";
-import Page from "../Pages/Components/Page";
+import {Page} from "../Components/Pages";
 import PagesContainer from "./PagesContainer";
 import SidebarContainer from "./SidebarContainer";
 import { useMediaQuery } from '@mui/material'

@@ -1,9 +1,8 @@
 import { useContext } from 'react'
 import { Tabs, Tab } from '@mui/material'
 import MainContext from '../../Context/index'
-import { tabsData } from '../Data/tabsData.Sidebar'
+import { tabsData } from '../../Constants/tabsData.Sidebar'
 import {useTheme} from '@mui/material/styles'
-import { red } from '@mui/material/colors'
 
 export default function SidebarTabs() {
     const { pageNumber, handlePageNumber } = useContext(MainContext)
