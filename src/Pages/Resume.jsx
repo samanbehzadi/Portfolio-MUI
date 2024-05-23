@@ -37,6 +37,26 @@ const Resume = ({ helmetTitle }) => {
                                     </Chip>
                                 </Divider>
                             </Slide>
+
+                            <Timeline position='right'>
+                                {/* First Item */}
+                                <Slide in={loading} direction='up' style={{ transitionDelay: loading ? '500ms' : null }}>
+                                    <TimelineItem >
+                                        <TimelineSeparator>
+                                            <TimelineDot color='info' variant='outlined'>
+                                                <HomeRepairServiceRounded color='info' />
+                                            </TimelineDot>
+                                            {/* <TimelineConnector /> */}
+                                        </TimelineSeparator>
+                                        <TimelineContent>
+                                            {/* <Typography variant='caption' color='gray'>1390 - 1393</Typography> */}
+                                            <Typography variant='body1' >به صورت تمرینی و انجام پروژه‌ دریافتی </Typography>
+                                            {/* <Typography variant='body3' >دیپلم</Typography> */}
+                                            {/* <Typography variant='body2' >رشته علوم انسانی</Typography> */}
+                                        </TimelineContent>
+                                    </TimelineItem>
+                                </Slide>
+                                </Timeline>
                         </div>
 
                         <div className="col-sm-6">
@@ -46,10 +66,10 @@ const Resume = ({ helmetTitle }) => {
                                     </Chip>
                                 </Divider>
                             </Slide>
+
                             <Timeline position='right'>
                                 {/* First Item */}
                                 <Slide in={loading} direction='up' style={{ transitionDelay: loading ? '500ms' : null }}>
-
                                     <TimelineItem >
                                         <TimelineSeparator>
                                             <TimelineDot color='info' variant='outlined'>
@@ -59,15 +79,31 @@ const Resume = ({ helmetTitle }) => {
                                         </TimelineSeparator>
                                         <TimelineContent>
                                             <Typography variant='caption' color='gray'>1390 - 1393</Typography>
-                                            <Typography variant='body1' color='black'>دبیرستان مفتح</Typography>
-                                            <Typography variant='body3' color='black'>دیپلم</Typography>
-                                            <Typography variant='body2' color='black'>رشته علوم انسانی</Typography>
+                                            <Typography variant='body1' >دبیرستان مفتح</Typography>
+                                            <Typography variant='body3' >دیپلم</Typography>
+                                            <Typography variant='body2' >رشته علوم انسانی</Typography>
                                         </TimelineContent>
                                     </TimelineItem>
                                 </Slide>
                                 {/* Second Item */}
                                 <Slide in={loading} direction="up" style={{ transitionDelay: loading ? '600ms' : 0 }}>
-
+                                    <TimelineItem>
+                                        <TimelineSeparator>
+                                            <TimelineDot color='info' variant='outlined'>
+                                                <SchoolRounded color='info' />
+                                            </TimelineDot>
+                                            <TimelineConnector />
+                                        </TimelineSeparator>
+                                        <TimelineContent sx={{ py: '12px', px: 2 }}>
+                                            <Typography variant='caption' color='gray'>1394 - 1398</Typography>
+                                            <Typography variant='body1' >دانشگاه آزاد اسلامی</Typography>
+                                            <Typography variant='body3' >کارشناسی</Typography>
+                                            <Typography variant='body2' >رشته کامپیوتر - نرم افزار</Typography>
+                                        </TimelineContent>
+                                    </TimelineItem>
+                                </Slide>
+                                {/* Third Item */}
+                                <Slide in={loading} direction="up" style={{ transitionDelay: loading ? '600ms' : 0 }}>
                                     <TimelineItem>
                                         <TimelineSeparator>
                                             <TimelineDot color='info' variant='outlined'>
@@ -76,10 +112,10 @@ const Resume = ({ helmetTitle }) => {
                                             {/* <TimelineConnector /> */}
                                         </TimelineSeparator>
                                         <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                            <Typography variant='caption' color='gray'>1394 - 1398</Typography>
-                                            <Typography variant='body1' color='black'>دانشگاه آزاد اسلامی</Typography>
-                                            <Typography variant='body3' color='black'>کارشناسی</Typography>
-                                            <Typography variant='body2' color='black'>رشته کامپیوتر - نرم افزار</Typography>
+                                            <Typography variant='caption' color='gray'>1398 - تاکنون</Typography>
+                                            <Typography variant='body1' >خودآموز</Typography>
+                                            <Typography variant='body3' ></Typography>
+                                            <Typography variant='body2' >در حوزه  نرم افزار</Typography>
                                         </TimelineContent>
                                     </TimelineItem>
                                 </Slide>

@@ -25,7 +25,7 @@ const WorkSamples = ({ helmetTitle }) => {
                 >
                     <Divider textAlign="center" sx={{ "&::before, &::after": { borderColor: "primary.main" }, mb: 3 }} >
                         <Chip icon={<SchoolRounded />} color="primary" label={<Typography variant="body1" color="black" sx={{ textAlign: "center" }} >
-                            نمونه‌کارهای من
+                            نمونه ‌کارهای من
                         </Typography>} sx={{ p: 3 }} />
                     </Divider>
                 </Slide>

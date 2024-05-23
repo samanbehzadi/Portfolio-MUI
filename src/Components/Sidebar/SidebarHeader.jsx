@@ -11,7 +11,7 @@ export default function SidebarHeader() {
             <Hidden mdDown>
                 <div className="position-relative d-flex">
                     <Avatar src='../../public/images/FastFood/client1.jpg' sx={{ height: 100, width: 100, margin: "8px auto" }}>
-                        سامان بهزادی
+                        <img src='./me.jpg' alt="سامان بهزادی" />
                     </Avatar>
                     <ThemeActionButton />
                 </div>
@@ -31,7 +31,7 @@ export default function SidebarHeader() {
                     <a id='instagram' className='p-2' role='button' href="https://instagram.com/behzadi__saman" target='_blank' rel='noopener noreferrer'>
                         <Instagram sx={{color: 'gray'}}/>
                     </a>
-                    <a id='telegram' className='p-2' role='button' href="https://t.me/saman_behzadi" target='_blank' rel='noopener noreferrer'>
+                    <a id='telegram' className='p-2' role='button' href="https://t.me/Behzadi_Saman" target='_blank' rel='noopener noreferrer'>
                         <Telegram sx={{color: 'gray'}}/>
                     </a>
             </div>

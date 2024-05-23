@@ -62,14 +62,14 @@ export default function AppContainer() {
                         <Resume helmetTitle={'وب‌سایت سامان بهزادی | رزومه'} />
                     </Page>
                     <Page pageNumber={pageNumber} index={3}>
-                        <WorkSamples helmetTitle="وب‌سایت سامان بهزادی | نمونه کارها" />
-                    </Page>
-                    <Page pageNumber={pageNumber} index={4}>
-                        <Testimonials helmetTitle='وب‌سایت سامان بهزادی | نظرات' />
-                    </Page>
-                    <Page pageNumber={pageNumber} index={5}>
                         <Contact helmetTitle='وب‌سایت سامان بهزادی | ارتباط با من'/>
                     </Page>
+                    {/* <Page pageNumber={pageNumber} index={4}>
+                        <WorkSamples helmetTitle="وب‌سایت سامان بهزادی | نمونه کارها" />
+                    </Page> */}
+                    {/* <Page pageNumber={pageNumber} index={5}>
+                        <Testimonials helmetTitle='وب‌سایت سامان بهزادی | نظرات' />
+                    </Page> */}
                 </PagesContainer>
 
             </MainLayout>

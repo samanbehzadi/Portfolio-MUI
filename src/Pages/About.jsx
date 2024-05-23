@@ -4,6 +4,7 @@ import { CodeRounded, KeyboardArrowLeftRounded, Person2Rounded, DockTwoTone } fr
 import { Skills } from '../Components/Pages'
 import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
+// import {me} from './f1.png'
 
 const About = ({ helmetTitle }) => {
     const [html, setHTML] = useState(0)
@@ -66,7 +67,8 @@ const About = ({ helmetTitle }) => {
 
                             <Grid className='d-flex align-items-center justify-content-center'>
                                 <Avatar className="d-flex align-items-center justify-content-center" variant='circle' sx={{ height: 150, width: 150, display: { xs: 'none', md: 'block' } }}>
-                                    سامان بهزادی
+                                    <img src='./me.jpg' alt="سامان بهزادی" />
+                                    {/* سامان بهزادی */}
                                 </Avatar>
                             </Grid>
 
